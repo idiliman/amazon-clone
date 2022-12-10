@@ -2,6 +2,7 @@ import Image from "next/image";
 import {
   ShoppingCartIcon,
   MagnifyingGlassIcon,
+  Bars4Icon,
 } from "@heroicons/react/24/outline";
 
 type Props = {};
@@ -44,15 +45,34 @@ function Header({}: Props) {
             <p className="font-extrabold md:text-sm">& Orders</p>
           </div>
 
-          <div className="link flex items-center space-x-0.5">
+          <div className="relative link flex items-center space-x-0.5">
+            <span className="absolute top-0 -right-2 md:right-10 h-4 w-4 bg-yellow-400 text-center rounded-lg text-black font-bold">
+              0
+            </span>
             <ShoppingCartIcon className="h-10" />
-            <p className="hidden md:block font-extrabold md:text-sm">Basket</p>
+            <p className="hidden md:block font-extrabold md:text-sm mt-2">
+              Basket
+            </p>
           </div>
         </div>
       </div>
 
       {/* Bottom navi */}
-      <div></div>
+      <div className="flex items-center space-x-3 p-2 pl-6 bg-amazon_blue-light text-white text-sm">
+        <p className="link flex items-center">
+          <Bars4Icon className="h-6 mr-1" />
+          All
+        </p>
+        <p className="link">Prime Video</p>
+        <p className="link">Amazon Business</p>
+        <p className="link">Today's Deals</p>
+        <p className="link hidden lg:block">Electronics</p>
+        <p className="link hidden lg:block">Food & Grocery</p>
+        <p className="link hidden lg:block">Prime</p>
+        <p className="link hidden lg:block">Buy Again</p>
+        <p className="link hidden lg:block">Shopper & Toolkit</p>
+        <p className="link hidden lg:block">Health & Personal Care</p>      
+      </div>
     </header>
   );
 }
