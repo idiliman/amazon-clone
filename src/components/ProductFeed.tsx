@@ -18,8 +18,9 @@ export default function ProductFeed({ products }: { products: Products[] }) {
         .map(({ id, title, price, description, category, image }) => {
           return (
             <Product
-              title={title}
+            key={id}
               id={id}
+              title={title}
               price={price}
               description={description}
               category={category}
@@ -52,19 +53,19 @@ export default function ProductFeed({ products }: { products: Products[] }) {
       </div>
 
       {products
-          ?.slice(5, products.length)
-          .map(({ id, title, price, description, category, image }) => {
-            return (
-              <Product
-                title={title}
-                id={id}
-                price={price}
-                description={description}
-                category={category}
-                image={image}
-              />
-            );
-          })}
+        ?.slice(5, products.length)
+        .map(({ id, title, price, description, category, image }) => {
+          return (
+            <Product
+              title={title}
+              id={id}
+              price={price}
+              description={description}
+              category={category}
+              image={image}
+            />
+          );
+        })}
     </div>
   );
 }
