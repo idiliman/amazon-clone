@@ -66,7 +66,7 @@ function Header({}: Props) {
         {/* FIXME: Show hidden item in small screen / "View more:" */}
         <p className="link">Prime Video</p>
         <p className="link">Amazon Business</p>
-        <p className="link">Today's Deals</p>
+        <p className="link">Today&apos;s Deals</p>
         <p className="link hidden lg:block">Electronics</p>
         <p className="link hidden lg:block">Food & Grocery</p>
         <p className="link hidden lg:block">Prime</p>

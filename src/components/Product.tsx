@@ -29,8 +29,10 @@ export default function Product({
   const [hasprime] = useState(Math.random() < 0.5);
 
   return (
-    <div className={`relative flex flex-col items-center m-5 bg-white z-30 p-10 `}>
-      
+    <div
+      key={id}
+      className={`relative flex flex-col items-center m-5 bg-white z-30 p-10 `}
+    >
       <p className="absolute top-2 right-2 text-xs italic text-gray-400">
         {category}
       </p>
@@ -62,7 +64,7 @@ export default function Product({
       {hasprime && (
         <div className="flex items-center space-x-2 -mt-5">
           <img
-          className="w-12"
+            className="w-12"
             src="https://whitebox.com/wp-content/uploads/2020/05/Prime-tag-.png"
             alt=""
           />

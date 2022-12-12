@@ -18,7 +18,7 @@ export default function ProductFeed({ products }: { products: Products[] }) {
         .map(({ id, title, price, description, category, image }) => {
           return (
             <Product
-            key={id}
+              key={id}
               id={id}
               title={title}
               price={price}
