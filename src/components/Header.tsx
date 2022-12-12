@@ -63,6 +63,7 @@ function Header({}: Props) {
           <Bars4Icon className="h-6 mr-1" />
           All
         </p>
+        {/* FIXME: Show hidden item in small screen / "View more:" */}
         <p className="link">Prime Video</p>
         <p className="link">Amazon Business</p>
         <p className="link">Today's Deals</p>
