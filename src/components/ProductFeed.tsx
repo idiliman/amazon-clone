@@ -12,7 +12,9 @@ interface Products {
 export default function ProductFeed({ products }: { products: Products[] }) {
   return (
     // grid-flow-row-dense (Populate all grid space)
-    <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:-mt-52 ">
+    <div
+      className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:-mt-52 "
+    >
       {products
         ?.slice(0, 4)
         .map(({ id, title, price, description, category, image }) => {
@@ -41,13 +43,14 @@ export default function ProductFeed({ products }: { products: Products[] }) {
           .map(({ id, title, price, description, category, image }) => {
             return (
               <Product
-                title={title}
-                id={id}
-                price={price}
-                description={description}
-                category={category}
-                image={image}
-              />
+              key={id}
+              id={id}
+              title={title}
+              price={price}
+              description={description}
+              category={category}
+              image={image}
+            />
             );
           })}
       </div>
@@ -57,13 +60,14 @@ export default function ProductFeed({ products }: { products: Products[] }) {
         .map(({ id, title, price, description, category, image }) => {
           return (
             <Product
-              title={title}
-              id={id}
-              price={price}
-              description={description}
-              category={category}
-              image={image}
-            />
+            key={id}
+            id={id}
+            title={title}
+            price={price}
+            description={description}
+            category={category}
+            image={image}
+          />
           );
         })}
     </div>

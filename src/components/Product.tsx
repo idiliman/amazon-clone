@@ -30,7 +30,7 @@ export default function Product({
 
   return (
     <div className="relative flex flex-col items-center m-5 bg-white z-30 p-10">
-      <p key={id} className="absolute top-2 right-2 text-xs italic text-gray-400">
+      <p className="absolute top-2 right-2 text-xs italic text-gray-400">
         {category}
       </p>
 
