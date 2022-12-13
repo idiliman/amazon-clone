@@ -5,6 +5,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { Sign } from "crypto";
 
 type Props = {};
 
@@ -39,7 +40,7 @@ function Header({}: Props) {
 
         {/* Right item */}
         <div className=" text-white flex items-center text-xs space-x-6">
-          <div onClick={signIn} className="link">
+          <div onClick={signIn<any>} className="link">
             <p>Hello Username</p>
             <p className="font-extrabold md:text-sm">Account & Lists</p>
           </div>
