@@ -1,3 +1,4 @@
+
 import Head from "next/head";
 import Image from "next/image";
 import { GetServerSideProps } from "next";
@@ -15,6 +16,7 @@ interface Products {
 }
 
 export default function Home({ products }: { products: Products[] }) {
+  
   return (
     <div className="bg-gray-100">
       <Head>

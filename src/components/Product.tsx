@@ -29,10 +29,7 @@ export default function Product({
   const [hasprime] = useState(Math.random() < 0.5);
 
   return (
-    <div
-      key={id}
-      className="relative flex flex-col items-center m-5 bg-white z-30 p-10"
-    >
+    <div className="relative flex flex-col items-center m-5 bg-white z-30 p-10">
       <p className="absolute top-2 right-2 text-xs italic text-gray-400">
         {category}
       </p>
@@ -50,8 +47,9 @@ export default function Product({
       <div className="flex">
         {Array(rating)
           .fill(0)
-          .map(() => (
-            <StarIcon className="h-5 text-yellow-500" />
+          .map((_, i) => (
+            // Every Map method need to has "key"
+            <StarIcon key={i} className="h-5 text-yellow-500" />
           ))}
       </div>
 

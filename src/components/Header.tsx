@@ -1,13 +1,17 @@
-import Image from "next/image";
 import {
   ShoppingCartIcon,
   MagnifyingGlassIcon,
   Bars4Icon,
 } from "@heroicons/react/24/outline";
+import Image from "next/image";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 type Props = {};
 
 function Header({}: Props) {
+// const handleSignin:any  = signIn();
+
+
   return (
     <header>
       {/* Top nav */}
@@ -35,7 +39,7 @@ function Header({}: Props) {
 
         {/* Right item */}
         <div className=" text-white flex items-center text-xs space-x-6">
-          <div className="link">
+          <div onClick={signIn} className="link">
             <p>Hello Username</p>
             <p className="font-extrabold md:text-sm">Account & Lists</p>
           </div>
@@ -72,7 +76,7 @@ function Header({}: Props) {
         <p className="link hidden lg:block">Prime</p>
         <p className="link hidden lg:block">Buy Again</p>
         <p className="link hidden lg:block">Shopper & Toolkit</p>
-        <p className="link hidden lg:block">Health & Personal Care</p>      
+        <p className="link hidden lg:block">Health & Personal Care</p>
       </div>
     </header>
   );
